@@ -1,34 +1,71 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-#chat-container {
-  width: 100%;
-  max-width: 400px;
+#chat-widget {
+  width: 350px;
   height: 500px;
-  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   display: flex;
   flex-direction: column;
-  background: white;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+#agent-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #4c6ef5;
+  color: white;
+}
+
+#agent-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#agent-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#agent-desc {
+  font-size: 12px;
+  opacity: 0.8;
 }
 
 #messages {
   flex: 1;
   padding: 10px;
   overflow-y: auto;
+  background: #f4f6fc;
 }
 
 .msg {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  max-width: 80%;
+  word-wrap: break-word;
 }
 
 .user {
-  font-weight: bold;
+  background: #d0ebff;
+  align-self: flex-end;
 }
 
 .bot {
-  color: #333;
+  background: #e9ecef;
+  align-self: flex-start;
 }
 
 #input-area {
@@ -38,10 +75,20 @@ body {
 
 #user-input {
   flex: 1;
-  padding: 8px;
+  padding: 10px;
   border: none;
+  font-size: 14px;
 }
 
 #send {
-  padding: 8px 12px;
+  padding: 10px 15px;
+  border: none;
+  background: #4c6ef5;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#send:hover {
+  background: #3b5bdb;
 }
