@@ -2,16 +2,28 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gemini Assistant</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<div id="chat-container">
+<div id="chat-widget">
+  <!-- Header agente -->
+  <div id="agent-header">
+    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712027.png" alt="Agent Icon" id="agent-icon">
+    <div id="agent-info">
+      <div id="agent-name">Gemini</div>
+      <div id="agent-desc">Il tuo assistente AI personale</div>
+    </div>
+  </div>
+
+  <!-- Area messaggi -->
   <div id="messages"></div>
 
+  <!-- Input -->
   <div id="input-area">
-    <input id="user-input" placeholder="Scrivi un messaggio..." />
+    <input id="user-input" placeholder="Scrivi qualcosa..." />
     <button id="send">Invia</button>
   </div>
 </div>
