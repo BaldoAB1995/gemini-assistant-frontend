@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       const data = await res.json();
-      const reply = data.candidates?.[0]?.content?.[0]?.parts?[0].text || "Errore: nessuna risposta";
+      const reply = data.candidates?.[0]?.content?.parts?[0].text || "Errore: nessuna risposta";
       addMessage("bot", reply);
 
     } catch (err) {
