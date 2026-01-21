@@ -44,8 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (data.candidates && data.candidates.length > 0) {
         const content = data.candidates[0].content;
-        if (content && content.length > 0 && content[0].text) {
-          reply = content[0].text;
+        if (content && content.length > 0 && content[0].parts && content[0].parts.length >0 && content[0],parts[0].text) {
+          reply = content[0].parts[0].text;
         }
       } else if (data.responseText) {
         reply = data.responseText;
