@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("Script linea 9");
   function addMessage(type, text) {
     const div = document.createElement("div");
-    div.className = msg ${type};
+    div.className = `msg ${type}`;
     div.innerText = text;
     messages.appendChild(div);
     messages.scrollTop = messages.scrollHeight;
