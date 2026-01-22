@@ -43,9 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let reply = "Errore: nessuna risposta";
 
       if (data.candidates && data.candidates.length > 0) {
-        addMessage("bot", "IN 1");
         if (data.candidates && data.candidates.length > 0 && data.candidates[0].content && data.candidates[0].content.parts && data.candidates[0].content.parts.length > 0 && data.candidates[0].content.parts[0].text) {
-          addMessage("bot", "IN 2");
           reply = data.candidates[0].content.parts[0].text;
         }
       } else if (data.responseText) {
