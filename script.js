@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let reply = "Errore: nessuna risposta";
 
       if (data.candidates && data.candidates.length > 0) {
-        const content = data.candidates[0].content[0].parts;
+        const content = data.candidates[0].content.parts;
         addMessage("bot", "IN 1");
         if (content && content.length > 0 && content[0].text) {
           addMessage("bot", "IN 2");
