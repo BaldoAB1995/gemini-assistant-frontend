@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (data.candidates && data.candidates.length > 0) {
         const content = data.candidates[0].content;
         addMessage("bot", "IN 1");
-        if (content && content.length > 0 && content[0].parts && content[0].parts.length >0 && content[0],parts[0].text) {
+        if (content && content.length > 0 && content[0].parts && content[0].parts.length >0 && content[0].parts[0].text) {
           addMessage("bot", "IN 2");
           reply = data.candidates[0].content[0].parts[0].text;
         }
